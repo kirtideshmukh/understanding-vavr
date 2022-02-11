@@ -1,0 +1,24 @@
+plugins {
+    id 'com.github.sherter.google-java-format' version '0.9'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.vavr:vavr:0.10.3'
+
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter-api:5.6.0',
+            'org.hamcrest:hamcrest-library:2.2')
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
